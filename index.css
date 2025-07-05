@@ -29,26 +29,26 @@ body.game-won {
 
 
 div#root {
-    height: 100%;
-    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
-    max-height: none;
-    max-width: none;
 }
 
 main {
     background-color: #F5F5F5;
-    height: 100%;
+    width: 100%;
+    max-width: 500px;
     border-radius: 5px;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
-    max-width: 500px;
-    padding: 1rem;
-    
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
 }
+
 
 .title {
     font-size: 3rem;
