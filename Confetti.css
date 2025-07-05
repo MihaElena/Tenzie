@@ -1,0 +1,20 @@
+
+.confetti-piece {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: hsl(var(--hue), 100%, 50%);
+  animation: fall 3s linear infinite;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}

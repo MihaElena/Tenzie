@@ -3,7 +3,8 @@ import rollSoundFile from "./sounds/roll.mp3"
 import winSoundFile from "./sounds/win.mp3"
 import { nanoid } from "nanoid"
 import Die from "./Die"
-//import Confetti from "react-confetti"
+import Confetti from "./Confetti"
+import Fireworks from "./Fireworks"
 
 function generateAllNewDice() {
   const newDice = new Array(10).fill(0).map(() => ({
@@ -90,7 +91,12 @@ export default function App() {
 
     return (
         <main>
-           
+           {gameWon && (
+  <>
+    <Confetti />
+    <Fireworks />
+  </>
+)}
             <div aria-live="polite" className="sr-only">
                 {gameWon && <p>Congratulations! You won! Press "New Game" to start again.</p>}
             </div>
